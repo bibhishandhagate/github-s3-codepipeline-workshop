@@ -9,7 +9,7 @@ phases:
     commands:
       - echo "Building static HTML site..."
       - mkdir -p output
-      - cp -r ./* output/
+      - rsync -av --exclude='output' ./ output/
 
   post_build:
     commands:
